@@ -1,4 +1,5 @@
 import Web3 from "web3";
+require('dotenv').config();
 
 const getWeb3 = () =>
   new Promise((resolve, reject) => {
@@ -26,7 +27,7 @@ const getWeb3 = () =>
       // Fallback to localhost; use dev console port by default...
       else {
         const provider = new Web3.providers.HttpProvider(
-          "http://127.0.0.1:8545"
+          "https://mainnet.infura.io/v3/" + process.env.INFURA_PROJECT_ID
         );
         const web3 = new Web3(provider);
         console.log("No web3 instance injected, using Local web3.");
