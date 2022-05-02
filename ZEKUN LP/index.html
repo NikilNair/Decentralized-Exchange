@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="./css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="my-wrap">
+			<div class="content-wrap">
+				<!-- <img src="./images/bg.jpg" class="bg"/> -->
+				<div class="content">
+					<div class="flex-normal header center">
+						<div class="flex-normal align-items-center left">
+							<img src="images/logo.png" class="logo" />
+							<div class="logo-name">OSUSWAP</div>
+						</div>
+						<a class="enter-link" href="trade.html">Enter App</a>
+					</div>
+					<div class="flex-column web-info center">
+						<div class="title1 top100">Blockchain-based decentralized crypto-currency exchange.</div>
+						<div class="intro top48">
+							this is a fully functional decentralized cryptocurrency exchange that can swap token pairs with an established liquidity pool.
+						</div>
+						<div class="flex-normal btn-list top48">
+							<button class="enter-btn" id="enter-app-btn">Enter App</button>
+							<button class="left24 more-btn">Learn More</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer flex-normal center">
+				<div class="left">
+					<div class="flex-normal align-items-center">
+						<img src="images/logo.png" class="logo" />
+						<div class="logo-name">OSUSWAP</div>
+					</div>
+				</div>
+				<div class="flex-normal footer-nav right">
+					<a class="footer-item" href="trade.html">Trade</a>
+					<a class="footer-item" href="liquidity.html">Liquidity</a>
+					<a class="footer-item" href="explore.html">Explore</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			var enter = document.getElementById('enter-app-btn')
+			enter.addEventListener('click',function(){
+				window.location.href = 'trade.html'
+			})
+		</script>
+	</body>
+</html>
