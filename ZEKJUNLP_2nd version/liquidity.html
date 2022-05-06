@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="./css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="my-wrap">
+			<div class="content" style="padding: 0;">
+				<div class="flex-normal align-items-center nav">
+					<a href="index.html" class="flex-normal align-items-center">
+						<img src="images/logo.png" class="logo" />
+						<div class="logo-name">OSUSWAP</div>
+					</a>
+					<div class="flex-normal nav-list left48">
+						<a class="nav-item" href="trade.html">Trade</a>
+						<a class="nav-item" href="liquidity.html">Liquidity</a>
+						<a class="nav-item" href="explore.html">Explore</a>
+					</div>
+				</div>
+				<div class="flex-normal connect">
+					<div class="flex-column connect-wrap">
+						<div class="flex-normal new">
+							<div class="text">Position Overview</div>
+							<button id="new">+ New Position</button>
+						</div>
+						<div class="intro">
+							Liquidity providers earn a 0.25% fee on all trades proportional to their share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity
+						</div>
+						<div class="content-btn">
+							<button id="connect">Connect to a wallet</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer flex-normal center">
+				<div class="left">
+					<div class="flex-normal align-items-center">
+						<img src="images/logo.png" class="logo" />
+						<div class="logo-name">OSUSWAP</div>
+					</div>
+				</div>
+				<div class="flex-normal footer-nav right">
+					<a class="footer-item" href="trade.html">Trade</a>
+					<a class="footer-item" href="liquidity.html">Liquidity</a>
+					<a class="footer-item" href="explore.html">Explore</a>
+				</div>
+			</div>
+			<div class="select-mask hide" id="select-mask3">
+				<div class="mask-wrap flex-column">
+					<div class="select-wrap">
+						<div class="flex-normal select-header align-items-center">
+							<div>Select a wallet</div>
+							<svg id="close-mask3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="24" height="24" class="text-high-emphesis"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+						</div>
+						<div class="connect-list flex-normal">
+							<div class="flex-normal content-item align-items-center">
+								<div class="text">Install Metamask</div>
+								<img src="./images/metamask.webp" class="icon"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="select-mask hide" id="select-mask4">
+				<div class="flex-normal form">
+					<div class="form-wrap liquidity">
+						<div class="flex-normal form-header align-items-center">
+							<div>Add Liquidity</div>
+							<svg id="close-mask4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+								stroke-width="2" stroke="currentColor" aria-hidden="true" width="24" height="24"
+								class="text-high-emphesis">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</div>
+						<div class="form-item">
+							<div class="flex-normal align-items-center">
+								<div id="select-decimal" class="decimal-select flex-normal align-items-center">
+									<img src="./images/1.webp" class="icon" />
+									<div class="left6 text">WETH</div>
+									<svg class="left6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+										fill="currentColor" aria-hidden="true" width="18">
+										<path fill-rule="evenodd"
+											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											clip-rule="evenodd"></path>
+									</svg>
+								</div>
+							</div>
+							<div class="flex-normal value">
+								<input type="number" class="input-value" placeholder="0.00" />
+								<div class="balance-text">Balance:0</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="flex-normal align-items-center">
+								<div id="select-decimal2" class="decimal-select2 flex-normal align-items-center">
+									<img src="./images/1.webp" class="icon" />
+									<div class="left6 text">WETH</div>
+									<svg class="left6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+										fill="currentColor" aria-hidden="true" width="18">
+										<path fill-rule="evenodd"
+											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+											clip-rule="evenodd"></path>
+									</svg>
+								</div>
+							</div>
+							<div class="flex-normal value">
+								<input type="number" class="input-value" placeholder="0.00" />
+								<div class="balance-text">Balance:0</div>
+							</div>
+						</div>
+						<div class="top16 flex-normal crate-wrap top48">
+							<button onclick="linkWallet()">Connect to a wallet</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="select-mask hide" id="select-mask">
+				<div class="mask-wrap flex-column">
+					<div class="select-wrap">
+						<div class="flex-normal select-header align-items-center">
+							<div>Select a token</div>
+							<svg id="close-mask" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+								stroke-width="2" stroke="currentColor" aria-hidden="true" width="24" height="24"
+								class="text-high-emphesis">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</div>
+						<div class="select-list">
+							<!-- <div class="title2">Common bases</div> -->
+							<div class="decimal-list flex-normal">
+								<div class="flex-normal decimal-item active align-items-center">
+									<img src="./images/1.webp" class="icon" />
+									<div class="left6 text">WETH</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/3.webp" class="icon" />
+									<div class="left6 text">WBTC</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/4.webp" class="icon" />
+									<div class="left6 text">MIM</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/5.webp" class="icon" />
+									<div class="left6 text">SPELL</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/6.webp" class="icon" />
+									<div class="left6 text">ICE</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/7.jpeg" class="icon" />
+									<div class="left6 text">USDC</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/8.jpeg" class="icon" />
+									<div class="left6 text">USDT</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/9.webp" class="icon" />
+									<div class="left6 text">DAI</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/11.webp" class="icon" />
+									<div class="left6 text">Olympus V2</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/12.webp" class="icon" />
+									<div class="left6 text">FRAX</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/20.webp" class="icon" />
+									<div class="left6 text">STG</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="select-mask hide" id="select-mask2">
+				<div class="mask-wrap flex-column">
+					<div class="select-wrap">
+						<div class="flex-normal select-header align-items-center">
+							<div>Select a token</div>
+							<svg id="close-mask2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+								stroke-width="2" stroke="currentColor" aria-hidden="true" width="24" height="24"
+								class="text-high-emphesis">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</div>
+						<div class="select-list">
+							<!-- <div class="title2">Common bases</div> -->
+							<div class="decimal-list flex-normal">
+								<div class="flex-normal decimal-item active align-items-center">
+									<img src="./images/1.webp" class="icon" />
+									<div class="left6 text">WETH</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/3.webp" class="icon" />
+									<div class="left6 text">WBTC</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/4.webp" class="icon" />
+									<div class="left6 text">MIM</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/5.webp" class="icon" />
+									<div class="left6 text">SPELL</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/6.webp" class="icon" />
+									<div class="left6 text">ICE</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/7.jpeg" class="icon" />
+									<div class="left6 text">USDC</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/8.jpeg" class="icon" />
+									<div class="left6 text">USDT</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/9.webp" class="icon" />
+									<div class="left6 text">DAI</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/11.webp" class="icon" />
+									<div class="left6 text">Olympus V2</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/12.webp" class="icon" />
+									<div class="left6 text">FRAX</div>
+								</div>
+								<div class="flex-normal decimal-item align-items-center">
+									<img src="./images/20.webp" class="icon" />
+									<div class="left6 text">STG</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/jquery.js"></script>
+		<script src="./js/web3.js"></script>
+		<script>
+			 $("#connect").click(function(){
+			   $("#select-mask3").fadeIn(500);
+			 });
+			 $("#close-mask3").click(function(){
+			   $("#select-mask3").fadeOut(500);
+			 });
+			 
+			 $(".content-item").click(function(){
+				linkWallet()
+			 })
+			 
+			 $("#new").click(function(){
+				  $("#select-mask4").fadeIn(500);
+			 })
+			 $("#close-mask4").click(function(){
+			   $("#select-mask4").fadeOut(500);
+			 });
+			 
+			 $("#select-decimal").click(function() {
+			 	$("#select-mask").fadeIn(500);
+			 });
+			 $("#close-mask").click(function() {
+			 	$("#select-mask").fadeOut(500);
+			 });
+			 
+			 $("#select-decimal2").click(function() {
+			 	$("#select-mask2").fadeIn(500);
+			 });
+			 $("#close-mask2").click(function() {
+			 	$("#select-mask2").fadeOut(500);
+			 });
+			 
+			 $("#select-mask .decimal-item").click(function() {
+			 	let list = $("#select-mask .decimal-item");
+			 	for (let i = 0; i < list.length; i++) {
+			 		list[i].classList.remove('active')
+			 	}
+			 	$(this).addClass('active')
+			 	console.log($(this).children('div').html())
+			 	$(".decimal-select .icon").attr('src', $(this).children('img').attr('src'))
+			 	$(".decimal-select .text").html($(this).children('div').html())
+			 	$("#select-mask").fadeOut(500);
+			 })
+			 
+			 $("#select-mask2 .decimal-item").click(function() {
+			 	let list = $("#select-mask2 .decimal-item");
+			 	for (let i = 0; i < list.length; i++) {
+			 		list[i].classList.remove('active')
+			 	}
+			 	$(this).addClass('active')
+			 	console.log($(this).children('div').html())
+			 	$(".decimal-select2 .icon").attr('src', $(this).children('img').attr('src'))
+			 	$(".decimal-select2 .text").html($(this).children('div').html())
+			 	$("#select-mask2").fadeOut(500);
+			 })
+			 
+			 async function linkWallet() {
+			 	if (typeof window.ethereum !== 'undefined') {
+			 	        let addr = await ethereum.request({ method: 'eth_requestAccounts' });//授权连接钱包
+			 	        console.log('用户钱包地址:',addr[0]);
+			 	}else{
+			 		console.log('未安装钱包插件！');
+			 	}
+			 }
+		</script>
+	</body>
+</html>
